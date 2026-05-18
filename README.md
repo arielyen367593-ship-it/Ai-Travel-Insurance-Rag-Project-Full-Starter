@@ -65,6 +65,8 @@
 ---
 
 ## 📁 專案目錄結構
+
+```bash
 Ai-Travel-Insurance-Rag-Project-Full-Starter/
 ├── data/                  # 保險 PDF（國泰、富邦、新光）
 ├── notebooks/             # 驗證與處理 Notebook
@@ -73,5 +75,5 @@ Ai-Travel-Insurance-Rag-Project-Full-Starter/
 ├── images/                # 報告截圖 + PDF 封面
 ├── requirements.txt
 ├── README.md
-├── report.pdf             # 期末報告 PDF
+├── report.pdf             # 期末報告 PDF（一定要上傳！）
 └── .env.example
