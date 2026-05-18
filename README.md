@@ -52,7 +52,7 @@ AI 旅平險專員 RAG 系統
 - 使用者問題 → Embedding → 相似度檢索 Top-5 chunks
 - 將 chunks 放入 Prompt → GPT-4o 生成答案 + Citation
 
-### 4. 驗證分析（最重要！）
+### 4. 驗證分析
 - 使用 **NotebookLM** 作為基準系統
 - 製作 20 題標準測試 QA
 - 比較「本系統」與「NotebookLM」在正確率、引用正確性、幻覺率的差異
