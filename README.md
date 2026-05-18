@@ -73,7 +73,7 @@ Ai-Travel-Insurance-Rag-Project-Full-Starter/
 ├── images/                # 報告截圖 + PDF 封面
 ├── requirements.txt
 ├── README.md
-├── report.pdf             # 期末報告 PDF（一定要上傳！）
+├── report.pdf             # 期末報告 PDF
 └── .env.example
 ## AI 工具鏈整合與任務執行紀錄 (20%)
 
