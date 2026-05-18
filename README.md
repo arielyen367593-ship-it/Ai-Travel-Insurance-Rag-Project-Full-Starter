@@ -77,3 +77,34 @@ Ai-Travel-Insurance-Rag-Project-Full-Starter/
 ├── README.md
 ├── report.pdf             # 期末報告 PDF（一定要上傳！）
 └── .env.example
+## 🛠 AI 工具鏈整合與任務執行紀錄 (20%)
+
+| 任務                  | 使用 AI 工具                  | 系統環境          | 輔助 IDE / 工具          |
+|-----------------------|-------------------------------|-------------------|--------------------------|
+| PDF 解析與資料收集    | ChatGPT-4o + Grok            | Windows 11        | VS Code + PyPDF         |
+| Chunking 與 Embedding | HuggingFace + LangChain      | Python 3.10       | Jupyter Notebook        |
+| 向量資料庫建立        | FAISS + sentence-transformers| 本地電腦          | Cursor + GitHub Copilot |
+| RAG 問答系統開發      | Grok + Claude                | Streamlit         | VS Code                 |
+| 驗證分析              | NotebookLM（基準系統）       | Jupyter           | 手動 QA 評分            |
+
+## 📋 系統完整設計流程 (70%)
+
+### 1. 資料收集
+- 下載國泰、富邦、新光三家官方旅平險 PDF 保單，放入 `data/` 資料夾
+
+### 2. 資料處理與向量化
+- PDF Parsing（PyPDF）→ Text Cleaning → RecursiveCharacterTextSplitter (chunk_size=500, overlap=100)
+- 使用 `sentence-transformers/all-MiniLM-L6-v2` 進行 Embedding
+- 存入 FAISS 向量資料庫
+
+### 3. RAG 問答流程
+- 使用者提問 → Embedding → FAISS 檢索 Top-6 → GPT-4o-mini 生成答案 + Citation
+
+### 4. 驗證分析（最重要！）
+- 使用 **NotebookLM** 作為基準系統
+- 製作 4 個測試問題（班機延誤、回程取消、酒醉受傷、海外住院）
+- 比較結果見報告第 9 頁表格
+- 驗證方式：手動檢查答案是否與保單條文一致 + 計算 Citation 正確率
+- 結論：本系統在中文條文理解與 Citation 能力優於 NotebookLM，回答速度更快
+
+**最終效能不重要，分析過程與改進建議才是重點！**
