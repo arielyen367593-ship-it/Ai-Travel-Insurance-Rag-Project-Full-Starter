@@ -65,3 +65,13 @@
 ---
 
 ## 📁 專案目錄結構
+Ai-Travel-Insurance-Rag-Project-Full-Starter/
+├── data/                  # 保險 PDF（國泰、富邦、新光）
+├── notebooks/             # 驗證與處理 Notebook
+├── src/                   # RAG 核心程式碼
+├── app/                   # Streamlit 前端
+├── images/                # 報告截圖 + PDF 封面
+├── requirements.txt
+├── README.md
+├── report.pdf             # 期末報告 PDF（一定要上傳）
+└── .env.example
