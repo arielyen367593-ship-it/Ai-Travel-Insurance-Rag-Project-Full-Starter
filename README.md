@@ -22,7 +22,7 @@ AI 旅平險專員 RAG 系統
 - 國泰
 - 富邦
 - 新光
-（可輕鬆擴充其他公司）
+
 
 ---
 
@@ -58,7 +58,7 @@ AI 旅平險專員 RAG 系統
 - 比較「本系統」與「NotebookLM」在正確率、引用正確性、幻覺率的差異
 - 提供詳細分析報告（見 `notebooks/validation.ipynb`）
 
-**最終效能不重要，分析過程與改進建議才是重點！**
+**最終效能不重要，分析過程與改進建議才是重點**
 
 ---
 
@@ -75,7 +75,7 @@ Ai-Travel-Insurance-Rag-Project-Full-Starter/
 ├── README.md
 ├── report.pdf             # 期末報告 PDF
 └── .env.example
-## AI 工具鏈整合與任務執行紀錄 (20%)
+## AI 工具鏈整合與任務執行紀錄 
 
 | 任務                  | 使用 AI 工具                  | 系統環境          | 輔助 IDE / 工具          |
 |-----------------------|-------------------------------|-------------------|--------------------------|
@@ -85,7 +85,7 @@ Ai-Travel-Insurance-Rag-Project-Full-Starter/
 | RAG 問答系統開發      | Grok + Claude                | Streamlit         | VS Code                 |
 | 驗證分析              | NotebookLM（基準系統）       | Jupyter           | 手動 QA 評分            |
 
- 系統完整設計流程 (70%)
+ 系統完整設計流程 
 
 1. 資料收集
 - 下載國泰、富邦、新光三家官方旅平險 PDF 保單，放入 `data/` 資料夾
@@ -98,7 +98,7 @@ Ai-Travel-Insurance-Rag-Project-Full-Starter/
 #3. RAG 問答流程
 - 使用者提問 → Embedding → FAISS 檢索 Top-6 → GPT-4o-mini 生成答案 + Citation
 
-#4. 驗證分析（最重要！）
+#4. 驗證分析
 - 使用 **NotebookLM** 作為基準系統
 - 製作 4 個測試問題（班機延誤、回程取消、酒醉受傷、海外住院）
 - 比較結果見報告第 9 頁表格
